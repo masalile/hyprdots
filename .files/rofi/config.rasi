@@ -1,0 +1,29 @@
+configuration {
+	modes: "window,drun,run,ssh";
+	font: "Segoe UI Variable Static Display Semibold 11";
+	fixed-num-lines: false;
+	show-icons: true;
+	terminal: "kitty";
+	run-shell-command: "{terminal} {cmd}";
+	drun-show-actions: true;
+	sidebar-mode: true;
+	hover-select: true;
+	auto-select: true;
+	window-thumbnail: true;
+    drun-use-desktop-cache: true;
+	drun-reload-desktop-cache: true;
+	display-window: "Windows";
+	display-run: "Run Command";
+	display-ssh: "SSH Clients";
+	display-drun: "Search";
+    timeout {
+        action: "kb-cancel";
+        delay:  0;
+    }
+    filebrowser {
+        directories-first: true;
+        sorting-method:    "name";
+    }
+}
+
+@theme "/home/mmhecker/.config/rofi/style.rasi"
