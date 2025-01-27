@@ -4,27 +4,27 @@
 }
 
 window {
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0);
 }
 
 button {
     border-radius: 10px;
+    border: none;
     margin: 5px; 
-    border-color: white;
 	text-decoration-color: #FFFFFF;
     color: #FFFFFF;
-	background-color: rgba(0, 0, 0, 0.5);
-	border-style: solid;
-	border-width: 1px;
+	background-color: rgba(0, 0, 0, 0);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 25%;
+    transition: all 0.25s ease-in-out;
 }
 
 button:focus, button:active, button:hover {
-	border-color: #007FFF;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.5);
 	outline-style: none;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.75);
+    transition: all 0.25s ease-in-out;
 }
 
 #lock       { background-image: image(url("icons/lock.png")); }

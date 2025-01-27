@@ -1,0 +1,104 @@
+* {
+	background-color: transparent;
+	text-color:       white;
+}
+
+window {
+	fullscreen:       true;
+	background-color: transparent;
+	padding: 32px;
+	children: [
+        mainshit,
+        wrap
+    ];
+}
+
+mainshit {
+    orientation: horizontal;
+    children: [
+        theentries,
+        listview
+    ];
+}
+
+icon-current-entry {
+    size: 256px;
+}
+
+textbox-current-entry {
+    horizontal-align: 0.5;
+}
+
+theentries {
+    orientation: vertical;
+    children: [
+        icon-current-entry,
+        textbox-current-entry
+    ];
+    vertical-align: 0.5;
+}
+
+wrap {
+	expand: false;
+	orientation: vertical;
+	children: [inputbar, message];
+	background-color: black/50%;
+	border-color: white;
+	border: 1px;
+	border-radius: 16px;
+}
+
+icon-ib {
+	expand: false;
+	filename: "system-search";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	size: 1em;
+}
+
+inputbar {
+	spacing: 0.4em;
+	padding: 0.4em;
+	children: [icon-ib, entry];
+}
+
+entry {
+	placeholder: "Search";
+	placeholder-color: grey;
+    text-color: white;
+}
+
+message {
+    background-color: black/50%;
+	border: 3px 0px 0px 0px;
+	padding: 8px;
+	spacing: 8px;
+}
+
+listview {
+	flow: horizontal;
+	fixed-columns: true;
+	columns: 6;
+	lines: 8;
+	spacing: 16px;
+}
+
+element {
+	padding: 4px;
+	background-color: black/50%;
+	border-color: white;
+	border: 2px;
+	border-radius: 16px;
+    children: [element-icon];
+}
+
+element-icon {
+	size: 64px;
+	horizontal-align: 0;
+	vertical-align: 0;
+}
+
+element selected {
+	background-color: black/75%;
+    border-color: #181828;
+}
